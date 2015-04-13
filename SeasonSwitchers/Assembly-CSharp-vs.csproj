@@ -46,12 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Rocks.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\EndingSwitch.cs" />
      <Compile Include="Assets\Scripts\Flowers.cs" />
      <Compile Include="Assets\Scripts\GoToNextLevel.cs" />
      <Compile Include="Assets\Scripts\PlayerInput.cs" />
+     <Compile Include="Assets\Scripts\Rocks.cs" />
      <Compile Include="Assets\Scripts\WaterCollider.cs" />
      <Compile Include="Assets\Scripts\alphaTree.cs" />
      <Compile Include="Assets\Scripts\checkStopMoving.cs" />
