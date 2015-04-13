@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerInput : MonoBehaviour 
 {
-	public float moveSpeed = 9f;
+	public float moveSpeed = 70f;
 	public float jumpHeight = 9f; 
 
 	private Rigidbody2D rb;
@@ -13,17 +13,15 @@ public class PlayerInput : MonoBehaviour
 
 	public Vector2 pPosition;
 
-	private bool seasonSwitch; 
-	public static bool seasonWinter;
-	public static bool seasonSpring;
+//	public static bool seasonSwitch; 
+//	public static bool seasonWinter;
+//	public static bool seasonSpring;
 
 	void Start () 
 	{
 		pPosition = new Vector2 (0, 0);
 		rb = GetComponent<Rigidbody2D>(); 
 		rb.fixedAngle = true; 
-		seasonSpring = true;
-		seasonWinter = false; 
 
 	}
 
@@ -43,21 +41,7 @@ public class PlayerInput : MonoBehaviour
 			Jump ();
 			doubleJumped = true; 
 		}
-		if (seasonSwitch && seasonSpring)
-		{
-			seasonWinter = true; 
-			seasonSpring = false; 
-			seasonSwitch = false; 
-			Debug.Log ("It is Winter");
-		}
-		else if (seasonSwitch && seasonWinter)
-		{
-			seasonSpring =true; 
-			seasonWinter = false;
-			seasonSwitch = false; 
-			Debug.Log("It is Spring");
-		}
-		
+
 	}
 	void Jump()
 	{
@@ -70,21 +54,27 @@ public class PlayerInput : MonoBehaviour
 		}
 	
 	}
-	 void OnTriggerExit2D ( Collider2D col) {
+	 void OnTriggerExit2D ( Collider2D col) 
+	{
 		grounded = false;
 	}
 
 
-	void OnTriggerEnter2D ( Collider2D col){
-		if (col.tag == "Enemy" || col.tag == "DeathGround") {
+	void OnTriggerEnter2D ( Collider2D col)
+	{
+		if (col.tag == "Enemy" || col.tag == "DeathGround") 
+		{
 			gameObject.transform.position = pPosition;
-		}
-	}
-	void OnCollisionEnter2D ( Collision2D col) {
-		if (col.gameObject.tag == "Switch") {
-			moveSpeed *= -1f;
-			seasonSwitch=true; 
+			EndingSwitch.seasonSpring = true;
+			EndingSwitch.seasonWinter = false;
+
+			if (checkStopMoving.goingLeft)
+			{
+				moveSpeed *= -1;
+				gameObject.transform.eulerAngles = new Vector3(0, 360 ,0);
 			}
+
+		}
 	}
 
 }
