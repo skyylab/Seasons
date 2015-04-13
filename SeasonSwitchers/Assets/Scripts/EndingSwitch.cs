@@ -57,10 +57,7 @@ public class EndingSwitch : MonoBehaviour
 //			Debug.Log("It is Spring");
 //		}
 
-		else
-		{
 		Invoke("turnMoveOn", waitFor);
-		}
 
 
 
