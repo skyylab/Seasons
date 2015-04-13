@@ -54,6 +54,7 @@ public class EndingSwitch : MonoBehaviour
 //		{
 //			seasonSpring =true; 
 //			seasonWinter = false; 
+//			seasonSwitch = false;
 //			Debug.Log("It is Spring");
 //		}
 

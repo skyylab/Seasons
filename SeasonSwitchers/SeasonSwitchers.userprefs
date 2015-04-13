@@ -1,11 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/WaterCollider.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EndingSwitch.cs">
     <Files>
       <File FileName="Assets/Scripts/WaterCollider.cs" Line="22" Column="5" />
       <File FileName="Assets/Scripts/Flowers.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/PlayerInput.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/EndingSwitch.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/EndingSwitch.cs" Line="53" Column="1" />
       <File FileName="Assets/Scripts/checkStopMoving.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
