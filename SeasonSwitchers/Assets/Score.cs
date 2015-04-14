@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Score : MonoBehaviour {
 	
-	public static int currentScore = 1;
+	public static int currentScore = 0;
 	// Use this for initialization
 	void Start () {
 		

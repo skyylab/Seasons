@@ -29,6 +29,7 @@ public class checkStopMoving : MonoBehaviour
 			print("is not moving");
 			gameObject.transform.position = pPosition;
 			Score.currentScore += 1;
+			playerMovOn.moveSpeed = 75f;
 			EndingSwitch.seasonSpring = true;
 			EndingSwitch.seasonWinter = false;
 			if (goingLeft)

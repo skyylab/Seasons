@@ -21,11 +21,11 @@ TagManager:
   - 
   - 
   - Bombs
-  - Player
+  - Background
   - Enemies
   - Pickups
   - Ground
-  - 
+  - Player
   - 
   - 
   - 
