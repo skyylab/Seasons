@@ -65,6 +65,7 @@ public class PlayerInput : MonoBehaviour
 		if (col.tag == "Enemy" || col.tag == "DeathGround") 
 		{
 			gameObject.transform.position = pPosition;
+			Score.currentScore += 1;
 			EndingSwitch.seasonSpring = true;
 			EndingSwitch.seasonWinter = false;
 
@@ -76,5 +77,9 @@ public class PlayerInput : MonoBehaviour
 
 		}
 	}
-
+	void OnCollisionEnter2D ( Collision2D col) {
+		if (col.gameObject.tag == "Switch") {
+			moveSpeed *= -1f; 
+		}
+	}
 }
